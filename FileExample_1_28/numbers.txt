@@ -1,0 +1,10 @@
+myVal=42
+myVal=66
+myVal=912
+myVal=-8
+myVal=8
+myVal=212
+myVal=912
+myVal=-291354923
+myVal=213
+myVal=23
