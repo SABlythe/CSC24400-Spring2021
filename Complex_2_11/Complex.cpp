@@ -2,7 +2,7 @@
 
 
 Complex
-Complex::operator+(Complex other)
+Complex::operator+(const Complex &other) const
 {
   Complex result;
 
@@ -14,7 +14,7 @@ Complex::operator+(Complex other)
 
 
 Complex
-Complex::operator+(double other)
+Complex::operator+(double other) const
 {
   Complex result;
 
@@ -24,7 +24,7 @@ Complex::operator+(double other)
   return result;
 }
 
-Complex operator+(double realNumber, Complex cNumber)
+Complex operator+(double realNumber, const Complex &cNumber)
 {
   Complex result;
 
@@ -35,7 +35,7 @@ Complex operator+(double realNumber, Complex cNumber)
 }
 
 
-std::ostream&  operator<<(std::ostream &someStream, Complex cNum)
+std::ostream&  operator<<(std::ostream &someStream, const Complex &cNum)
 {
   someStream << cNum._real << " + " << cNum._imaginary << "i";
   return someStream;
