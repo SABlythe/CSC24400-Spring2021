@@ -49,7 +49,11 @@ int main(int argc, char *argv[])
   // cout.operator<<(sum);
   //   or
   // operator<<(cout, sum);
-  
-
   cout << endl;
+
+  
+  sum.imaginary()=-3.14159;
+
+  cout << sum << endl;
+  return 0;
 }
