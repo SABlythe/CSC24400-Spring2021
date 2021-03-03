@@ -25,6 +25,35 @@ PartiallyFilledArray::add(const string &toAdd)
   _currSize++; 
 }
 
+void
+PartiallyFilledArray::operator+=(const std::string &toAdd)
+{
+  add(toAdd);
+}
+
+void
+PartiallyFilledArray::operator+=(const PartiallyFilledArray &otherPFA)
+{
+  for (int index=0; index < otherPFA._currSize; index++)
+    {
+      *this += otherPFA._array[index];
+    }
+}
+
+string&
+PartiallyFilledArray::operator[] (int index)
+{
+  if (index < _currSize)
+    return _array[index];
+  else
+    {
+      cerr << "invalid index (" << index << ") ... size is "
+	   <<  _currSize << endl;
+      string *answer = new string;
+      return *answer;
+    }
+}
+
 
 ostream&
 PartiallyFilledArray::print(ostream &toThisStream) const
@@ -38,3 +67,7 @@ PartiallyFilledArray::print(ostream &toThisStream) const
 }
   
  
+std::ostream& operator<<(std::ostream &os, const PartiallyFilledArray &pfa)
+{
+  return pfa.print(os);
+}
