@@ -54,6 +54,18 @@ PartiallyFilledArray::operator[] (int index)
     }
 }
 
+const PartiallyFilledArray&
+PartiallyFilledArray::operator=(const PartiallyFilledArray &rhs)
+{
+  _array = new string[rhs._currSize];
+  // fill it in
+  for (int index=0; index< rhs._currSize; index++)
+    _array[index] = rhs._array[index];
+
+  _currSize = rhs._currSize;
+
+  return *this;
+}
 
 ostream&
 PartiallyFilledArray::print(ostream &toThisStream) const

@@ -38,6 +38,12 @@ int main(int argc, char *argv[])
 
   PartiallyFilledArray copy;
 
+  /*
+    int a=2;
+    int b=a;
+    b=3;   /// this should not change a !!!! 
+   */
+  
   copy = fifty;
 
   cout << fifty << "===========================================" <<endl;

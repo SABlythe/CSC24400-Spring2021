@@ -20,7 +20,10 @@ public:
   
   std::string& operator[] (int index);
 
-
+  // PartiallyFilledArray a, b, c;
+  //   allows c=a=b;
+  //       c =  a.operator=(b);
+  const PartiallyFilledArray& operator=(const PartiallyFilledArray &rhs);
   
   std::ostream& print(std::ostream &toThisStream) const; 
   
