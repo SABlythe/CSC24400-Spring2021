@@ -25,9 +25,17 @@ int main(int argc, char *argv[])
   cout << nameList;
   cout << "===== END OF NAMES LIST =====" << endl;
 
-  StringList empty;
-  cout << empty;
-  cout << "===== END OF EMPTY LIST =====" << endl;
+  nameList.append("Sailor");
+  nameList.append("Gehner");
+
+  cout << nameList;
+  cout << "===== END OF NAMES LIST =====" << endl;
+
+  StringList evil;
+
+  evil.append("Gates");
+  cout << evil;
+  cout << "===== END OF EVIL LIST =====" << endl;
   
   return 0;
 }

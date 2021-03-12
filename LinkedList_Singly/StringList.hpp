@@ -9,11 +9,14 @@
 class StringList
 {
 private:
-  StringNode *_head; 
+  StringNode *_head;
+  StringNode *_tail; 
 public:
-  StringList() {_head=NULL;}
+  StringList() : _head(NULL), _tail(NULL) {}
 
   void insert(const std::string &someVal);
+  
+  void append(const std::string &someVal);
 
   std::ostream& print(std::ostream& os) const;
 
